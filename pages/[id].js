@@ -3,9 +3,9 @@ import { FiArrowLeft } from "react-icons/fi";
 import { NextSeo } from "next-seo";
 import { getNFT, getNFTInfo } from "../util/requests";
 import { useRouter } from "next/router";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/RarityFilters/Navbar";
 import { config } from "../config";
-import { Footer } from "../components/Footer";
+import { Footer } from "../components/RarityFilters/Footer";
 
 const Trait = (attribute) => {
   return (
@@ -114,6 +114,7 @@ function NFT({ nft, title }) {
 
 NFT.getInitialProps = async ({ query }) => {
   let nft = await getNFT(config.STARTING_INDEX == 1 ? query.id - 1 : query.id);
+
   // let opensea_info = await getNFTInfo(query.id);
   // nft["opensea_link"] = opensea_info["assets"][0]["permalink"];
   nft["current_price"] = "-";

@@ -2,12 +2,12 @@ import Head from "next/head";
 import React, { createRef, useState } from "react";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
-import { NFT } from "../components/NFT";
-import { SideBar } from "../components/SideBar";
-import { PageNumbers } from "../components/PageNumbers";
-import Navbar from "../components/Navbar";
-import { TraitFilters } from "../components/TraitFilters";
-import { Footer } from "../components/Footer";
+import { NFT } from "../components/RarityFilters/NFT";
+import { SideBar } from "../components/RarityFilters/SideBar";
+import { PageNumbers } from "../components/RarityFilters/PageNumbers";
+import Navbar from "../components/RarityFilters/Navbar";
+import { TraitFilters } from "../components/RarityFilters/TraitFilters";
+import { Footer } from "../components/RarityFilters/Footer";
 import { config } from "../config";
 import { getFilters, getNFTs } from "../util/requests";
 
